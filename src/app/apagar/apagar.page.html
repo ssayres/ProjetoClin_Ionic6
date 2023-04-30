@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista de Consultas Agendadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Consultas Agendadas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <form>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome do Paciente</ion-label>
+      <ion-label>Data</ion-label>
+      <ion-label>Horário</ion-label>
+      <ion-label>Médico</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="warning" fill="solid" size="small">Atualizar</ion-button>
+        <ion-button color="danger" fill="solid" size="small">Apagar</ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>João Silva</ion-label>
+      <ion-label>10/05/2023</ion-label>
+      <ion-label>14:30</ion-label>
+      <ion-label>Dr. José Maria</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="warning" fill="solid" size="small">Atualizar</ion-button>
+        <ion-button color="danger" fill="solid" size="small">Apagar</ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Maria Santos</ion-label>
+      <ion-label>12/05/2023</ion-label>
+      <ion-label>09:00</ion-label>
+      <ion-label>Dra. Ana Paula</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="warning" fill="solid" size="small">Atualizar</ion-button>
+        <ion-button color="danger" fill="solid" size="small">Apagar</ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Felipe Alves</ion-label>
+      <ion-label>15/05/2023</ion-label>
+      <ion-label>16:45</ion-label>
+      <ion-label>Dr. Marcos Oliveira</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="warning" fill="solid" size="small">Atualizar</ion-button>
+        <ion-button color="danger" fill="solid" size="small">Apagar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+    </form>
+  </div>
+</ion-content>

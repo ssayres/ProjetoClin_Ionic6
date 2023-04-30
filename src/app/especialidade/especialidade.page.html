@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Especialidade médica</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Especialidade médica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <form>
+      <ion-item>
+        <ion-label>Especialidade:</ion-label>
+        <ion-select id="especialidade-dropdown" name="especialidade">
+          <ion-select-option value="" disabled selected>Selecione uma especialidade</ion-select-option>
+          <ion-select-option value="cardiologia">Cardiologia</ion-select-option>
+          <ion-select-option value="dermatologia">Dermatologia</ion-select-option>
+          <ion-select-option value="endocrinologia">Endocrinologia</ion-select-option>
+          <ion-select-option value="neurologia">Neurologia</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item id="exames-container" style="display: none">
+        <ion-label>Exame:</ion-label>
+        <ion-select id="exame-dropdown" name="exame"></ion-select>
+      </ion-item>
+      <ion-button id="confirm-button" type="submit">Confirmar</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const especialidadeDropdown = document.getElementById("especialidade-dropdown");
+    const exameDropdown = document.getElementById("exame-dropdown");
+    const examesContainer = document.getElementById("exames-container");
+
+    especialidadeDropdown.addEventListener("change", () => {
+      examesContainer.style.display = "block";
+
+      switch (especialidadeDropdown.value) {
+        case "cardiologia":
+          exameDropdown.innerHTML = `
+            <ion-select-option value="eco">Ecocardiograma</ion-select-option>
+            <ion-select-option value="teste-esforco">Teste de esforço</ion-select-option>
+          `;
+          break;
+        case "dermatologia":
+          exameDropdown.innerHTML = `
+            <ion-select-option value="biopsia">Biopsia de pele</ion-select-option>
+            <ion-select-option value="exame-sangue">Exame de sangue</ion-select-option>
+          `;
+          break;
+        case "endocrinologia":
+          exameDropdown.innerHTML = `
+            <ion-select-option value="hormonios">Dosagem de hormônios</ion-select-option>
+            <ion-select-option value="glicemia">Dosagem de glicemia</ion-select-option>
+          `;
+          break;
+        case "neurologia":
+          exameDropdown.innerHTML = `
+            <ion-select-option value="ressonancia">Ressonância magnética</ion-select-option>
+            <ion-select-option value="tomografia">Tomografia computadorizada</ion-select-option>
+          `;
+          break;
+        default:
+          exameDropdown.innerHTML = "";
+          examesContainer.style.display = "none";
+          break;
+      }
+    });
+  });
+</script>

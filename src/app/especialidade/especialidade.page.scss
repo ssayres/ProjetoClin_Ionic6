@@ -1,0 +1,54 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #2990eb, #FFFFFF);
+  
+  
+    h2 {
+      margin-bottom: 2rem;
+    }
+  
+    form {
+        width: 80%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 2rem;
+        border-radius: 8px;
+      
+  
+      ion-item {
+        width: 100%;
+        max-width: 30rem;
+        margin-bottom: 1rem;
+  
+        ion-label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+  
+        ion-select {
+          width: 100%;
+        }
+      }
+  
+      #exames-container {
+        ion-select {
+          margin-top: 0.5rem;
+        }
+      }
+  
+      #confirm-button {
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 30rem;
+      }
+    }
+  }
